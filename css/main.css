@@ -1,0 +1,819 @@
+@font-face {
+  font-family: Ubuntu-BoldItalic;
+  src: url("../fonts/Ubuntu-Light.ttf");
+}
+
+/* blabalniy style dinak */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+input{
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Ubuntu-BoldItalic, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(220, 20, 60, 0.531);
+  border-radius: 10px;
+}
+
+.wrapper {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.left {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem 0;
+}
+
+.right {
+  width: 49%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 0;
+}
+
+#left {
+  padding-top: 2rem;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  margin: 2rem 0;
+}
+
+.title h1 {
+  position: relative;
+  color: crimson;
+}
+
+.title h1::after {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  transform: translateX(50px);
+  transform: translateY(22px);
+  width: 100%;
+  height: 4px;
+  background-color: crimson;
+}
+
+.title h1:before {
+  position: absolute;
+  top: 26px;
+  right: 47.9px;
+  display: block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: crimson;
+  border-radius: 50%;
+}
+
+.btn-crimson {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: crimson;
+  color: #fff;
+  margin: 1.5rem 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.5s linear;
+  border: solid 1px crimson;
+}
+
+.btn-crimson:hover {
+  background-color: #fff;
+  border: solid 1px crimson;
+  color: #000;
+}
+
+/* header navbar style */
+
+header {
+  width: 100%;
+  min-height: 10vh;
+  background-color: crimson;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+}
+
+header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+header nav .logo h1 a {
+  font-family: Ubuntu-Regular, sans-serif;
+  color: #fff;
+  font-weight: 800;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+header nav .logo h1 a:hover {
+  color: #00001693;
+}
+
+.menu {
+  width: 40px;
+  height: 35px;
+  background-color: transparent;
+  display: none;
+  transition: all 0.5s linear;
+}
+
+.menu .item {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin-top: 7px;
+}
+
+header nav ul {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul li a {
+  color: #fff;
+  font-size: 17px;
+  font-family: Ubuntu-BoldItalic,sans-serif;
+  position: relative;
+  transition: all 0.5s linear;
+  font-weight: 600;
+}
+
+header nav ul li a:hover {
+  color: #000016ac;
+}
+
+/* hero section style */
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image:linear-gradient(#00000096,#00000096,#00000096),url("../video/ezgif.com-gif-maker\ \(4\).webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;  
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2.5rem;
+  background-attachment: fixed;
+}
+
+.hero-section {
+  padding-left: 2rem;
+  color: #fff;
+}
+
+.hero-section h1 span {
+  font-size: 53px;
+  font-family: Ubuntu-Medium;
+}
+
+.animation {
+  height: 35px;
+  color: crimson;
+  overflow: hidden;
+  margin: 1rem 0;
+  font-size: 21px;
+}
+
+.animation h1 {
+  margin: 10px 0;
+}
+
+.animation h1:nth-child(1) {
+  margin-top: 0;
+  animation-name: text;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes text {
+  0% {
+    margin-top: 0px;
+  }
+  25% {
+    margin-top: -49px;
+  }
+  50% {
+    margin-top: -95px;
+  }
+}
+
+/* about section */
+
+.img-box {
+  width: 500px;
+  border-radius: 7px;
+  /* object-fit: cover; */
+}
+
+.img-box img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.text {
+  margin: 1rem 0;
+  /* width: 450px; */
+}
+
+/* skills section */
+
+.skills {
+  width: 100%;
+  background-color: #000016;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.render {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.render h2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.renders {
+  width: 100%;
+}
+
+.render .foiz {
+  width: 100%;
+  height: 15px;
+  background-color: grey;
+  position: relative;
+  margin: 5px 0px;
+}
+
+#html {
+  display: block;
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  background-color: #e45126;
+}
+#css {
+  display: block;
+  width: 75%;
+  height: 100%;
+  position: absolute;
+  background-color: #0c73b8;
+}
+
+#bootstrap {
+  display: block;
+  width: 75%;
+  height: 100%;
+  position: absolute;
+  background-color: #0c73b8;
+}
+
+#sass {
+  display: block;
+  width: 65%;
+  height: 100%;
+  position: absolute;
+  background-color: crimson;
+}
+
+#bootstrap {
+  display: block;
+  width: 75%;
+  height: 100%;
+  position: absolute;
+  background-color: #32ccda;
+}
+
+#javascript {
+  display: block;
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  background-color: #e3a324;
+}
+
+.skills {
+  width: 100%;
+}
+
+.card-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem 2.5rem;
+}
+
+.card {
+  width: 30%;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0.5px;
+  cursor: pointer;
+  transition: all 0.5s linear;
+  margin: 10px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 10px 0.5px crimson;
+}
+
+.card h1 {
+  text-align: center;
+  margin: 10px 0;
+  color: crimson;
+}
+
+.card p {
+  text-align: center;
+}
+
+/* work section */
+
+.work {
+  width: 100%;
+  background-color: #000016;
+  padding: 1rem 1.2rem;
+}
+
+.galery {
+  width: 700px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  /* overflow: scroll; */
+  cursor: pointer;
+}
+
+.galery {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.crad-img {
+  width: 32%;
+  margin: 10px 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.crad-img img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in;
+}
+
+.crad-img img:hover {
+  transform: scale(1.2);
+  opacity: 0.6;
+}
+
+#btn-center {
+  margin: 10px auto;
+}
+/* Сontact */
+
+.contact{
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.card-contact {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+}
+
+.card-contact .card-cont {
+  width: 22%;
+  margin: 0.5rem 5px;
+  padding: 2rem 1rem;
+  box-shadow: 0px 0px 10px 1px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+}
+
+.card-contact .card-cont:hover {
+  box-shadow:  0px 0px 6px 1px crimson;
+}
+
+.card-contact .card-cont h1 {
+  margin: 10px 0;
+}
+
+.card-contact .card-cont p {
+  color: grey;
+}
+
+.form-contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-contact form {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  box-shadow: 0px 0px 5px 1px #000;
+  border-radius: 5px;
+  transition: all .3s linear;
+  cursor: pointer;
+}
+
+.form-contact form:hover{
+  box-shadow: 0px 0px 5px 1px crimson;
+}
+
+.form-contact h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: 900;
+}
+
+.form-contact form input {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: solid 1px #000;
+  font-size: 17px;
+}
+
+
+.form-contact form textarea{
+  width: 100%;
+  resize: none;
+  border-radius: 5px;
+  border: solid 1px #000;
+  font-size: 17px;
+}
+
+.form-contact form input::placeholder{
+  margin-left: 15;
+  font-size: 17px;
+}
+
+.form-contact form textarea::placeholder{
+  margin-left: 15;
+  font-size: 17px;
+}
+
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  background-color: #000016;
+  color: #fff;
+}
+
+.footer h2{
+  margin: 10px 0;
+}
+
+#submit{
+  width: 100%;
+  background-color: crimson;
+  border: none;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-align: center;
+  padding: .7rem 0;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all .5s linear;
+}
+
+#submit:hover{
+  background-color: #fff;
+  color: #000;
+  border: solid 1px #000;
+}
+/* responsive  */
+
+@media screen and (max-width: 1275px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  header nav ul {
+    width: 43%;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  header nav ul {
+    display: none;
+  }
+  .left {
+    width: 100%;
+    padding: 0rem 1rem;
+  }
+  .right {
+    width: 100%;
+    padding: 0rem 1rem;
+  }
+  .hero-section h1 span {
+    font-size: 35px;
+  }
+  .menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .img-box {
+    margin: 15px auto;
+  }
+
+  .links {
+    position: absolute;
+    top: 183px;
+    right: 0;
+    width: 0%;
+    height: 50vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99;
+    animation-name: modal;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  header nav ul li a {
+    font-size: 19px;
+    color: #000;
+    display: inline-block;
+    padding: 1px 15px;
+    transition: all 0.7s linear;
+  }
+
+  header nav ul li a:hover {
+    background-color: crimson;
+    color: #fff;
+    border-radius: 10px;
+  }
+
+  header nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  .card {
+    width: 45%;
+  }
+  .card:nth-child(3) .card {
+    margin: 0 auto;
+  }
+  .crad-img {
+    width: 49%;
+  }
+  .card-contact .card-cont {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  header nav {
+    padding: 0rem 1rem;
+    position: relative;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  .hero-section {
+    padding-left: 0.5rem;
+  }
+
+  .left {
+    width: 100%;
+    padding: 0rem 1rem;
+  }
+  .right {
+    width: 100%;
+    padding: 0rem 1rem;
+  }
+  .img-box {
+    width: 330px;
+    margin: 15px auto;
+  }
+  .hero-section h1 span {
+    font-size: 35px;
+  }
+  .menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .animation {
+    height: 27px;
+  }
+
+  .animation h1 {
+    font-size: 21px;
+    margin: 5px;
+  }
+  .card {
+    width: 75%;
+    margin: 10px auto;
+  }
+  .crad-img {
+    width: 100%;
+  }
+  .galery {
+    padding: 0rem 0.7rem;
+  }
+  .card-contact .card-cont {
+    width: 100%;
+  }
+  .form-contact{
+    padding: 1.5rem 1.2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  header nav {
+    padding: 0rem 1rem;
+    position: relative;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  .hero-section {
+    padding-left: 0.5rem;
+  }
+
+  .left {
+    width: 100%;
+    padding: 0rem 2rem;
+  }
+  .right {
+    width: 100%;
+    padding: 0rem 2rem;
+  }
+  .img-box {
+    width: 200px;
+    margin: 0 auto;
+  }
+  .hero-section h1 span {
+    font-size: 35px;
+  }
+  .menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .animation {
+    height: 27px;
+  }
+
+  .animation h1 {
+    font-size: 21px;
+    margin: 5px;
+  }
+  .card {
+    width: 100%;
+    margin: 10px auto;
+  }
+  .paragraph {
+    width: 100%;
+    padding: 0rem 15px;
+  }
+  .paragraph p {
+    margin: 0 auto;
+  }
+  .crad-img {
+    width: 100%;
+  }
+  .galery {
+    padding: 0rem 0.5rem;
+  }
+}
+
+@keyframes modal {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 35%;
+  }
+}
+
+.item11 {
+  transform: translate(4px, 10px) rotateZ(42deg);
+  transition: all 0.5s linear;
+}
+
+.item12 {
+  opacity: 0;
+}
+
+.item13 {
+  transform: translate(4px, -9px) rotateZ(142deg);
+  transition: all 0.5s linear;
+}
